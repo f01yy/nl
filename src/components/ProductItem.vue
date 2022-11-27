@@ -29,13 +29,27 @@ export default {
 </script>
 
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .products__item {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: auto 1fr auto;
   grid-template-rows: auto 1fr auto;
 }
 .products__info {
   width: 274px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 0 24px;
   text-align: center;
@@ -92,6 +106,7 @@ export default {
 .products__img {
   width: 100%;
   height: 100%;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 

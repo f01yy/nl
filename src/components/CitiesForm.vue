@@ -91,6 +91,13 @@ export default {
 </script>
 
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .city-form {
   height: 84px;
 }
@@ -113,11 +120,19 @@ export default {
   position: absolute;
   right: 18px;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   border: none;
   background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .city-form__clear-img {
@@ -130,13 +145,20 @@ export default {
   line-height: 24px;
 }
 .city-form__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 18px;
   margin-top: 12px;
 }
 .city-form__search {
   width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .city-form__list {
@@ -164,6 +186,8 @@ export default {
   line-height: 24px;
   color: #979797;
   padding: 8px 16px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
 }

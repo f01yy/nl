@@ -127,16 +127,31 @@ export default {
 </script>
 
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .products {
   padding: 35px 0;
 }
 .products__body {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 240px 20px 1fr;
   grid-template-columns: 240px 1fr;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
   column-gap: 20px;
 }
 .products__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
@@ -145,8 +160,14 @@ export default {
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .products__title {

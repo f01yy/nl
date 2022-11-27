@@ -101,11 +101,19 @@ export default {
 </script>
 
 <style>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import '@/assets/FuturaPT/stylesheet.css';
 
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 body {
@@ -126,11 +134,23 @@ body {
   text-transform: uppercase;
   width: 174px;
   height: 48px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 1.75px;
   cursor: pointer;
   color: #ffffff;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#ffa800),
+    color-stop(60.2%, #ff6f00)
+  );
+  background: -o-linear-gradient(right, #ffa800 0%, #ff6f00 60.2%);
   background: linear-gradient(270deg, #ffa800 0%, #ff6f00 60.2%);
   border: none;
   position: relative;
@@ -147,17 +167,33 @@ body {
   content: ' ';
   top: 8px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   height: 48px;
   width: 145px;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(rgba(255, 168, 0, 0.6)),
+    to(rgba(255, 111, 0, 0.6))
+  );
+  background: -o-linear-gradient(
+    right,
+    rgba(255, 168, 0, 0.6) 0%,
+    rgba(255, 111, 0, 0.6) 100%
+  );
   background: linear-gradient(
     270deg,
     rgba(255, 168, 0, 0.6) 0%,
     rgba(255, 111, 0, 0.6) 100%
   );
+  -webkit-filter: blur(13.5914px);
   filter: blur(13.5914px);
 }
 .header {
+  -webkit-box-shadow: 0px 2px 4px rgba(39, 39, 39, 0.1);
   box-shadow: 0px 2px 4px rgba(39, 39, 39, 0.1);
   padding: 25px 0;
   background-color: #fff;
@@ -166,9 +202,15 @@ body {
   background-color: transparent;
   cursor: pointer;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 8px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .header__location {

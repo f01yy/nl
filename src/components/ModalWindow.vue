@@ -31,6 +31,13 @@ export default {
 </script>
 
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .modal {
   z-index: 1;
   position: fixed;
@@ -39,18 +46,27 @@ export default {
   right: 0;
   left: 0;
   background-color: rgba(53, 54, 71, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .modal__body {
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 10px rgba(151, 151, 151, 0.2);
   box-shadow: 0px 2px 10px rgba(151, 151, 151, 0.2);
   border-radius: 5px;
   padding: 30px 20px;
   position: relative;
 }
 .modal__close {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
   border: none;
   background-color: transparent;
@@ -60,6 +76,8 @@ export default {
   cursor: pointer;
 }
 .modal__close:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 </style>
