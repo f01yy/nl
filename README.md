@@ -1,5 +1,5 @@
 # nl
-
+Использовалось: HTML, CSS, Javascript, Vue 3, Vur-Router, Axios.
 ## Project setup
 ```
 npm install
