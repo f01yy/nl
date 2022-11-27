@@ -94,13 +94,6 @@ export default {
 </script>
 
 <style scoped>
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 .city-form {
 }
 .city-form__input-wrapper {
@@ -210,6 +203,9 @@ export default {
 
 @media screen and (max-width: 640px) {
   .city-form__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .city-form__title {

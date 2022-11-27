@@ -127,13 +127,6 @@ export default {
 </script>
 
 <style scoped>
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 .products {
   padding: 35px 0;
 }
@@ -178,11 +171,18 @@ export default {
 }
 
 @media screen and (max-width: 1024px) {
+  .products {
+    padding: 20px 0;
+  }
   .products__body {
     display: block;
   }
   .products__title {
-    font-size: 30px;
+    margin-top: 10px;
+    font-size: 26px;
+  }
+  .products__header {
+    display: block;
   }
 }
 </style>
