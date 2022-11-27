@@ -34,6 +34,9 @@ export default {
   grid-template-rows: auto 1fr auto;
 }
 .products__info {
+  width: 274px;
+  display: flex;
+  flex-direction: column;
   padding: 0 24px;
   text-align: center;
 }
@@ -73,9 +76,11 @@ export default {
   margin: 16px auto 18px auto;
   width: 212px;
   height: 45px;
+  width: 194px;
 }
 .products__buy::after {
-  width: 194px;
+  max-width: 194px;
+  width: 100%;
 }
 .products__item {
   background-color: #fff;
@@ -88,5 +93,29 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) {
+  .products__img-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+  .products__item {
+    width: 200px;
+  }
+  .products__price {
+    margin-top: auto;
+    font-size: 22px;
+  }
+  .products__name {
+    word-wrap: break-word;
+    font-size: 18px;
+  }
+  .products__info {
+    width: 200px;
+  }
+  .products__buy {
+    width: 154px;
+  }
 }
 </style>

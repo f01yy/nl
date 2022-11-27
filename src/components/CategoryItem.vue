@@ -32,8 +32,14 @@ export default {
   position: absolute;
   top: 20px;
   left: 20px;
+  right: 20px;
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
+}
+@media screen and (max-width: 640px) {
+  .categories__name {
+    font-size: 20px;
+  }
 }
 </style>

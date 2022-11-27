@@ -5,7 +5,7 @@ import ProductsPage from '@/pages/ProductsPage.vue';
 
 const routes = [
   { path: '/', component: CategoriesPage, props: true },
-  { path: '/category/:slug', component: ProductsPage, props: true },
+  { path: '/category/:slug/:subslug?', component: ProductsPage, props: true },
 ];
 
 export default createRouter({

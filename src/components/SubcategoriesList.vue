@@ -10,6 +10,7 @@
       >
         Все продукты
       </div>
+
       <div
         v-for="subcategory in subcategories"
         :key="subcategory.id"
@@ -28,6 +29,8 @@
 
 <script>
 export default {
+  components: {},
+
   props: {
     subcategories: Array,
     selectedSubcategory: Object,
@@ -43,6 +46,8 @@ export default {
 
 <style scoped>
 .products__subcategory {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   height: 40px;
   font-weight: 400;
@@ -54,5 +59,19 @@ export default {
 }
 .products__subcategory_active {
   background: #e9eef3;
+}
+@media screen and (max-width: 1024px) {
+  .products__subcategories-wrapper {
+    margin-bottom: 20px;
+  }
+  .products__subcategories {
+    justify-content: center;
+    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .products__subcategory {
+    border-bottom: 2px solid #b6c9dc;
+  }
 }
 </style>

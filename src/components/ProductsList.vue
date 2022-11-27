@@ -24,10 +24,15 @@ export default {
 
 <style scoped>
 .products__list {
-  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 276px);
   gap: 24px;
   justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .products__list {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
 }
 </style>

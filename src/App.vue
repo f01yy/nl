@@ -13,7 +13,11 @@
       </div>
     </header>
 
-    <router-view :categories="categories" :cityId="cityId" />
+    <router-view
+      @set-categories="setCategories"
+      :categories="categories.length > 0 ? categories : null"
+      :cityId="cityId"
+    />
   </div>
 </template>
 
@@ -77,6 +81,10 @@ export default {
       this.cityId = city.id;
       this.cityName = city.city;
       this.showModal = false;
+    },
+
+    setCategories(categories) {
+      this.categories = categories;
     },
   },
 

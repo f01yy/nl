@@ -33,4 +33,9 @@ export default {
   margin-bottom: 20px;
   margin-top: 35px;
 }
+@media screen and (max-width: 640px) {
+  .categories__title {
+    font-size: 30px;
+  }
+}
 </style>
