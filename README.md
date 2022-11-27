@@ -1,5 +1,5 @@
 # nl
-Использовалось: HTML, CSS, Javascript, Vue 3, Vur-Router, Axios.
+Использовалось: HTML, CSS, Javascript, Vue 3, Vur-Router, Axios, БЭМ. Страница доступна как для мобильных устройств, так и для ПК.
 ## Project setup
 ```
 npm install
