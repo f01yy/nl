@@ -7,7 +7,10 @@
           <input
             v-model="term"
             :class="{
-              extended: this.term.length > 2 && this.citiesOptions.length,
+              extended:
+                this.term.length > 2 &&
+                this.citiesOptions.length &&
+                !canConfirm,
             }"
             class="city-form__input"
             type="text"
@@ -18,7 +21,7 @@
           </button>
         </div>
         <div
-          v-if="term.length > 2 && citiesOptions.length"
+          v-if="term.length > 2 && citiesOptions.length && !canConfirm"
           class="city-form__list"
         >
           <div class="city-form__separator"></div>
@@ -39,7 +42,7 @@
         :class="{
           btn_disabled: !canConfirm,
         }"
-        class="btn"
+        class="btn city-form__btn"
       >
         Подтвердить
       </button>
@@ -99,17 +102,17 @@ export default {
 */
 
 .city-form {
-  height: 84px;
 }
 .city-form__input-wrapper {
   position: relative;
 }
 .city-form__input {
+  width: 100%;
+  padding-right: 32px;
   outline: none;
   border: 1px solid rgba(151, 151, 151, 0.5);
   border-radius: 5px;
   padding: 0 16px;
-  width: 100%;
   height: 48px;
   font-family: 'Futura PT';
   font-weight: 400;
@@ -140,11 +143,13 @@ export default {
   height: 12px;
 }
 .city-form__title {
+  margin-top: 10px;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
 }
 .city-form__body {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,7 +157,9 @@ export default {
   margin-top: 12px;
 }
 .city-form__search {
-  width: 540px;
+  position: relative;
+  max-width: 540px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,20 +169,26 @@ export default {
   flex-direction: column;
 }
 .city-form__list {
+  position: absolute;
+  top: 48px;
   border: 1px solid rgba(151, 151, 151, 0.5);
   border-top: none;
   border-radius: 0 0 5px 5px;
   background-color: #fff;
+  z-index: 1;
+  width: 100%;
 }
 .city-form__list ul {
   list-style-type: none;
+}
+.city-form__list li {
 }
 .city-form__input.extended {
   border-radius: 5px 5px 0 0;
   border-bottom: none;
 }
 .city-form__separator {
-  width: 508px;
+  width: 90%;
   margin: 0 auto;
   height: 2px;
   background-color: rgba(151, 151, 151, 0.3);
@@ -193,5 +206,32 @@ export default {
 }
 .city-form__item:hover {
   color: #272727;
+}
+
+@media screen and (max-width: 640px) {
+  .city-form__body {
+    flex-direction: column;
+  }
+  .city-form__title {
+    font-size: 18px;
+  }
+  .city-form__btn {
+    font-size: 14px;
+  }
+  .city-form__input {
+    font-size: 16px;
+    padding-right: 25px;
+  }
+  .city-form__list li {
+    font-size: 16px;
+  }
+  .city-form__clear {
+    right: 9px;
+  }
+  .city-form__body {
+    gap: 16px;
+  }
+  .city-form {
+  }
 }
 </style>

@@ -134,6 +134,7 @@ body {
   text-transform: uppercase;
   width: 174px;
   height: 48px;
+  padding: 0 5px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -159,7 +160,7 @@ body {
 .btn_disabled {
   background: transparent;
   color: #acacac;
-  border: 2px solid rgba(151, 151, 151, 0.3);
+  outline: 2px solid rgba(151, 151, 151, 0.3);
 }
 .btn:not(.btn_disabled)::after {
   z-index: -1;
@@ -171,7 +172,7 @@ body {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   height: 48px;
-  width: 145px;
+  width: 80%;
   background: -webkit-gradient(
     linear,
     right top,

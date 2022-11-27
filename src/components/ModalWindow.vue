@@ -39,6 +39,7 @@ export default {
 */
 
 .modal {
+  padding-top: 150px;
   z-index: 1;
   position: fixed;
   top: 0;
@@ -52,17 +53,18 @@ export default {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .modal__body {
+  width: 100%;
+  max-width: 769px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 10px rgba(151, 151, 151, 0.2);
   box-shadow: 0px 2px 10px rgba(151, 151, 151, 0.2);
   border-radius: 5px;
   padding: 30px 20px;
   position: relative;
+  margin: 10px;
 }
 .modal__close {
   -webkit-transition: all 0.2s;
